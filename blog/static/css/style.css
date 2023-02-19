@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
+.base{
+    background: #F7F6CF;
+    font-family: 'Mynerve', cursive;
+}
+
+.navbar{
+    background: #5784BA;
+}
+
+h2{
+    color: #5784BA !important;
+}
+
+p{
+    color: #9AC8EB;
+}
+
+.nav-link{
+    color: #9AC8EB !important;
+    font-size: 1vw !important;
+}
+
+.nav-link:hover{
+    color: #B6D8F2 !important;
+}
+
+.logo{
+    width: 10vw;
+}
+
+footer{
+    text-align:center;
+    position: fixed;
+    bottom:0;
+    width:100%;
+    display:inline-block;
+    vertical-align:top;
+    font-size: 1.2vw;
+    font-size: 1.2vw;
+    color: #5784BA !important;
+    text-shadow: 1px 2px #F4CFDF !important;
+}
+
+.card {
+    background: #F4CFDF !important;
+    color: #5784BA !important;
+    border: 1px solid #fff !important;
+}
+
+.card-title{
+    color: #9AC8EB !important;
+}
+
+.card-text{
+    color: #F7F6CF !important;
+    font-size: 2rem;
+}
+
+.btn{
+    color: #F7F6CF !important;
+    background: #9AC8EB !important;
+}
