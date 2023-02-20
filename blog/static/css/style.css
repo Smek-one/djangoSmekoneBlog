@@ -1,29 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+
+
 .base{
-    background: #F7F6CF;
+    background: #E1A624;
     font-family: 'Mynerve', cursive;
 }
 
 .navbar{
-    background: #5784BA;
+    background: #317AC1;
 }
 
 h2{
-    color: #5784BA !important;
+    color: #384454 !important;
 }
 
 p{
-    color: #9AC8EB;
+    color: #384454;
 }
 
 .nav-link{
-    color: #9AC8EB !important;
+    color: #D4D3DC !important;
     font-size: 1vw !important;
 }
 
 .nav-link:hover{
-    color: #B6D8F2 !important;
+    color: #384454 !important;
 }
 
 .logo{
@@ -32,8 +35,7 @@ p{
 
 footer{
     text-align:center;
-    position: fixed;
-    bottom:0;
+    bottom: 0;
     width:100%;
     display:inline-block;
     vertical-align:top;
@@ -44,21 +46,36 @@ footer{
 }
 
 .card {
-    background: #F4CFDF !important;
-    color: #5784BA !important;
-    border: 1px solid #fff !important;
+    background: #D4D3DC !important;
+    color: #384454 !important;
+    border: 1px solid #AD956B !important;
 }
 
 .card-title{
-    color: #9AC8EB !important;
+    color: #E1A624 !important;
 }
 
 .card-text{
-    color: #F7F6CF !important;
-    font-size: 2rem;
+    color: #384454 !important;
+    font-size: 25px;
+    font-family: 'Mynerve', cursive;
 }
 
+.muted{
+    color: #AD956B !important;
+}
+
+
 .btn{
-    color: #F7F6CF !important;
-    background: #9AC8EB !important;
+    color: #E1A624 !important;
+    background: #317AC1 !important;
+}
+
+.top-img{
+    width: 70rem;
+}
+
+.o-img{
+    width: 35rem;
+    margin: 2vh auto;
 }

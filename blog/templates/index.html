@@ -1,6 +1,8 @@
 {% extends "base.html" %}
-{% block content %}
+
 {% load static %}
+
+{% block content %}
 
 <header class="masthead">
     <div class="overlay"></div>
@@ -8,8 +10,8 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="site-heading">
-                    <h2 class=" site-heading my-4 mt-3"> Blog photos </h2>
-                    <p class="fs-5">Nature, paysages, cascades, rivières, voyages, randonnées...</p>
+                    <h2 class=" site-heading my-4 mt-3"> Smek-One Pics</h2>
+                    <p class="fs-5">Savoie, voyages, paysages, cascades, rivières, voyages, randonnées...</p>
                 </div>
             </div>
         </div>
@@ -23,7 +25,7 @@
             <div class="card mb-4 border-black">
                 <div class="card-body">
                     <h2 class="card-title">{{ post.title }}</h2>
-                    <p class="card-text text-muted h6">{{ post.author }} | {{ post.created_on}} </p>
+                    <p class="card-text muted h6">{{ post.author }} | {{ post.created_on}} </p>
                     <p class="card-text">{{post.content|slice:":200" }}</p>
                     <a href="{% url 'post_detail' post.slug  %}" class="btn">Lire l'article &rarr;</a>
                 </div>

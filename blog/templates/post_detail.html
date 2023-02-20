@@ -3,12 +3,26 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12 card mb-4  mt-3 mx-auto">
-      <div class="card-body mx-auto">
-        <h1>{% block title %} {{ object.title }} {% endblock title %}</h1>
-        <p class=" text-muted">{{ post.author }} | {{ post.created_on }}</p>
-        <p class="card-text ">{{ object.content | safe }}</p>
+      <div class="card-body mx-auto text-center">
+        <h1 class="card-title">{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <p class="muted">{{ post.author }} | {{ post.created_on }}</p>
+
+        <img src="{{ post.image1.url }}" alt="{{post.title}}" class="top-img rounded">
+
+        <p class="card-text">{{ object.content | safe }}</p>
+
+      <div class="imgs">
+        <img src="{{ post.image2.url }}" alt="{{post.title}}" class="rounded o-img">
+        <img src="{{ post.image3.url }}" alt="{{post.title}}" class="rounded o-img">
+
+        <p class="card-text">{{ object.content | safe }}</p>
+
+        <img src="{{ post.image4.url }}" alt="{{post.title}}" class="rounded o-img">
+        <img src="{{ post.image5.url }}" alt="{{post.title}}" class="rounded o-img">
+      </div>
       </div>
     </div>
+
 
   </div>
 </div>
