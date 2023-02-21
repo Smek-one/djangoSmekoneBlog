@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 
 .base{
@@ -58,7 +58,7 @@ footer{
 .card-text{
     color: #384454 !important;
     font-size: 25px;
-    font-family: 'Mynerve', cursive;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .muted{
@@ -78,4 +78,8 @@ footer{
 .o-img{
     width: 35rem;
     margin: 2vh auto;
+}
+
+.pic-of-me{
+    width: 25rem;
 }

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 card mb-4  mt-3 mx-auto">
+      <div class="card-body mx-auto text-center">
+        <h1 class="card-title">{% block title %} {{ slug.title }} {% endblock title %}</h1>
+            <p class="card-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc laoreet dui ac quam euismod, a tristique quam convallis. Sed posuere, sapien ac malesuada rutrum, sapien dolor tincidunt tortor, vitae consequat ipsum magna non libero. Donec neque libero, facilisis in est non, venenatis lacinia erat. Integer commodo pulvinar euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam varius suscipit risus, ut finibus ligula rhoncus tempus. Praesent blandit urna at aliquet tempor. Fusce eu hendrerit orci, non feugiat magna. Praesent varius blandit ipsum, ac molestie diam auctor eget. Ut eget odio in nisl volutpat condimentum. Quisque elit enim, fermentum nec massa vitae, finibus tempus sem. Suspendisse potenti.
+            </p>
+
+          <img src="{% static 'media/profilPic.png' %}" class="pic-of-me" alt="pic of me">
+      </div>
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+{% endblock content %}
