@@ -38,6 +38,29 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact</a>
                         </li>
+                        </ul>
+
+<ul class="navbar-nav ml-auto float-end">
+          {% if user.is_authenticated %}
+          <li class="nav-item active">
+            <a class="nav-link" href="#">{{user}},</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'logout' %}">Déconnexion</a>
+          </li>
+          {% else %}
+          <li class="nav-item active">
+            <a class="nav-link" href="{% url 'login' %}">Connexion</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Inscription</a>
+          </li>
+          {% endif %}
+        </ul>
+
+
+
+
                     </ul>
                 </div>
             </div>
@@ -46,8 +69,9 @@
         <!-- Content Goes here -->
         {% endblock content %}
         <!-- Footer -->
-        <footer class="mt-5">
-            <p class="mt-5 text-center">Copyright &copy; Smek-One {% now 'Y' %}</p>
+
+        <footer class="footer">
+            <p class="text-center p-3">Copyright &copy; Smek-One {% now 'Y' %}</p>
         </footer>
 
 

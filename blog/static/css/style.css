@@ -4,8 +4,14 @@
 
 
 .base{
-    background: #E1A624;
+    background: url("/static/media/bg.jpeg") no-repeat;
+    background-size: cover;
     font-family: 'Mynerve', cursive;
+
+}
+
+body{
+    position: relative;
 }
 
 .navbar{
@@ -34,16 +40,18 @@ p{
 }
 
 footer{
-    text-align:center;
+    margin-top: 5vh;
+    position: relative;
+    left: 0;
     bottom: 0;
-    width:100%;
-    display:inline-block;
-    vertical-align:top;
-    font-size: 1.2vw;
-    font-size: 1.2vw;
+    width: 100%;
+    font-size: 1.1vw;
+    height: 5vh;
     color: #5784BA !important;
     text-shadow: 1px 2px #F4CFDF !important;
+    background: #D4D3DC;
 }
+
 
 .card {
     background: #D4D3DC !important;

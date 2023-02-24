@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'blog',
     'jazzmin',
     'django.contrib.admin',
+    'usersapp',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,12 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
+
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL = 'home'
+...
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+...
 
 
 # Password validation

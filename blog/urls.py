@@ -8,7 +8,7 @@ from .views import AboutView
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
-    path('about/', AboutView.as_view(), name='about'),
+    path('about/', views.AboutView.as_view(), name='about'),
     path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
 ]
 
