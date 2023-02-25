@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+    <h2 class="text-center m-5">Inscription</h2>
+    {% if form.errors %}
+        {{ form.errors }}
+    {% endif %}
+<div class="card col-md-8 mx-auto text-center">
+    <form method="post" class="my-5">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <button type="submit" class="btn btn-info">S’inscrire</button>
+    </form>
+    </div>
+{% endblock content %}

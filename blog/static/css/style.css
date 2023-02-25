@@ -91,3 +91,8 @@ footer{
 .pic-of-me{
     width: 25rem;
 }
+
+span{
+    display: none;
+}
+

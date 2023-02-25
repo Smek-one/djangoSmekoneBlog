@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
 <h2>Se connecter </h2>
-<div>
+<div class="card col-md-8 mx-auto text-center">
+    <div class="card-body mx-auto text-center">
     <form method="post">
         {% csrf_token %}
         {% if form.non_field_errors %}
@@ -20,12 +21,13 @@
          </table>
         <button type="submit">se connecter</button>
     </form>
+        </div>
 </div>
 
 <div>
     <small>
         Pas encore inscrit.e?
-        <a href="#">
+        <a href="{% url 'signup' %}">
             S'inscrire
         </a>
     <br>

@@ -41,7 +41,10 @@ INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
     'usersapp',
+    'crispy_forms',
 ]
+
+CRISPY_TEMPLATE_PACK = 'uni_form'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -86,6 +89,7 @@ DATABASES = {
 
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 ...
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ...
