@@ -1,40 +1,18 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+{% load static %}
 {% block content %}
-<h2>Se connecter </h2>
-<div class="card col-md-8 mx-auto text-center">
-    <div class="card-body mx-auto text-center">
-    <form method="post">
+{% load crispy_forms_tags %}
+<h2 class="text-center m-5">Connexion</h2>
+<div class="card col-md-6 mx-auto text-center">
+    <div form-group>
+    <form method="post" class="my-5">
+
         {% csrf_token %}
-        {% if form.non_field_errors %}
-            {% for error in form.non_field_errors %}
-            <p class="alert alert-danger">{{ error }}</p>
-            {% endfor %}
-        {% endif %}
-        <table>
-        {% for field in form %}
-          <tr>
-            <td>{{ field.label_tag }}</td>
-            <td>{{ field }}</td>
-          </tr>
-          
-        {% endfor %}
-         </table>
-        <button type="submit">se connecter</button>
+        {{ form|crispy }}
+
+        <button type="submit" class="btn">S’inscrire</button>
     </form>
         </div>
-</div>
+    </div>
 
-<div>
-    <small>
-        Pas encore inscrit.e?
-        <a href="{% url 'signup' %}">
-            S'inscrire
-        </a>
-    <br>
-        Mot de passe oublié ?
-        <a href="#">
-            Renouveler mon mot de passe
-        </a>
-    </small>
-</div>
 {% endblock %}

@@ -6,7 +6,7 @@
 .base{
     background: url("/static/media/bg.jpeg") no-repeat;
     background-size: cover;
-    font-family: 'Mynerve', cursive;
+    font-family: 'Montserrat', cursive;
 
 }
 
@@ -36,12 +36,11 @@ p{
 }
 
 .logo{
-    width: 10vw;
+    width: 15vw;
 }
 
 footer{
-    margin-top: 5vh;
-    position: relative;
+    position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -50,17 +49,19 @@ footer{
     color: #5784BA !important;
     text-shadow: 1px 2px #F4CFDF !important;
     background: #D4D3DC;
+    margin-top: 5vh !important;
 }
-
 
 .card {
     background: #D4D3DC !important;
     color: #384454 !important;
     border: 1px solid #AD956B !important;
+
 }
 
 .card-title{
     color: #E1A624 !important;
+    text-shadow: 1px 2px #384454;
 }
 
 .card-text{
@@ -70,7 +71,11 @@ footer{
 }
 
 .muted{
-    color: #AD956B !important;
+    color: #317AC1 !important;
+}
+
+.figure-caption{
+    color: #317AC1 !important;
 }
 
 
@@ -91,8 +96,3 @@ footer{
 .pic-of-me{
     width: 25rem;
 }
-
-span{
-    display: none;
-}
-

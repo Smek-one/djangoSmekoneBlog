@@ -42,9 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.admin',
     'usersapp',
     'crispy_forms',
+    "crispy_bootstrap5",
+
 ]
 
-CRISPY_TEMPLATE_PACK = 'uni_form'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -142,15 +146,15 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #JAZZ ADMIN
 JAZZMIN_SETTINGS = {
     "site_title": "Smek-one",
-    "site_header": "your_site_header",
-    "site_brand": "your_site_brand",
-    "site_icon": "images/favicon.png",
+    "site_header": "Admin",
+    "site_brand": "Smek-One Pics Admin",
+    "site_icon": "media/logo.png",
     # Add your own branding here
-    "site_logo": None,
-    "welcome_sign": "Welcome to the your_site_name",
+    "site_logo": "media/logo.png",
+    "welcome_sign": "Welcome to the admin !",
     # Copyright on the footer
-    "copyright": "mek-one",
-    "user_avatar": None,
+    "copyright": "smek-one",
+    "user_avatar": "media/logoW.png",
     "custom_css": "css/bootstrap-dark.css",
     ############
     # Top Menu #
@@ -158,7 +162,7 @@ JAZZMIN_SETTINGS = {
     # Links to put along the top menu
     "topmenu_links": [
         # Url that gets reversed (Permissions can be added)
-        {"name": "your_site_name", "url": "home", "permissions": ["auth.view_user"]},
+        {"name": "Smek-One Pics Admin", "url": "home", "permissions": ["auth.view_user"]},
         # model admin to link to (Permissions checked against model)
         {"model": "auth.User"},
     ],

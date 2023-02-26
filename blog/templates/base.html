@@ -55,25 +55,24 @@
             <a class="nav-link" href="{% url 'signup' %}">Inscription</a>
           </li>
           {% endif %}
-        </ul>
-
-
-
-
                     </ul>
                 </div>
             </div>
         </nav>
         {% block content %}
-        <!-- Content Goes here -->
+            <!-- Content Goes here -->
         {% endblock content %}
         <!-- Footer -->
 
-        <footer class="footer">
-            <p class="text-center p-3">Copyright &copy; Smek-One {% now 'Y' %}</p>
-        </footer>
+    {% block footer %}
+        <!-- Content Goes here -->
+    {% endblock footer %}
 
 
+<footer>
+    <p class="text-center p-3">Copyright &copy; Smek-One {% now 'Y' %}</p>
+</footer>
 
+    <script src="{% static './js/script.js' %}"></script>
     </body>
 </html>
