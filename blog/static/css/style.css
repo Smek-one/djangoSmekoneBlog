@@ -55,7 +55,7 @@ footer{
     background: #D4D3DC !important;
     color: #384454 !important;
     border: 1px solid #E1A624 !important;
-
+    overflow: hidden;
 }
 
 .card-title{
@@ -73,11 +73,6 @@ footer{
     color: #317AC1 !important;
 }
 
-.figure-caption{
-    color: #317AC1 !important;
-}
-
-
 .btn{
     color: #E1A624 !important;
     background: #317AC1 !important;
@@ -91,7 +86,7 @@ footer{
 }
 
 .top-img, .img-thumbnail{
-    width: 80rem;
+    width: 80%;
 }
 
 .o-img{
@@ -133,3 +128,10 @@ hr{
     color:#5784BA;
 }
 
+.advertissment{
+    color: #5784BA;
+}
+
+.link-auth{
+    color: #E1A624;
+}

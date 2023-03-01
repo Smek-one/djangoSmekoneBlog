@@ -4,44 +4,43 @@
 {% load static %}
 
 
-<br class="container mb-5">
-  <div class="row">
-    <div class="col-md-10 card mt-3 mx-auto">
+
+    <div class="col-md-10 col-sm-8 card mt-3 mx-auto">
       <div class="card-body mx-auto text-center">
         <h1 class="card-title">{% block title %} {{ post.title }} {% endblock title %}</h1>
         <p class="muted">{{ post.author }} | {{ post.created_on }}</p>
 
-        <figure class="figure">
-  <img src="{{ post.image1.url }}" alt="{{image1.title}}" class="img-thumbnail rounded mx-auto">
-            <figcaption class="figure-caption">{{ image1.title }}</figcaption>
-  </figure>
+
+  <img src="{{ post.image1.url }}" alt="{{image1.title}}" class="img-thumbnail rounded">
+
+
+
+        <p class="card-text">{{ post.content | safe }}</p>
+
+      <div class="imgs col-sm-8mx-auto">
+
+        <img src="{{ post.image2.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img mx-auto">
+
+
+        <img src="{{ post.image3.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img mx-auto">
 
 
         <p class="card-text">{{ post.content | safe }}</p>
 
-      <div class="imgs">
-          <figure class="figure">
-        <img src="{{ post.image2.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
-              </figure>
-          <figure class="figure">
-        <img src="{{ post.image3.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
-              </figure>
-
-        <p class="card-text">{{ post.content | safe }}</p>
-
-        <img src="{{ post.image4.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
-        <img src="{{ post.image5.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
+        <img src="{{ post.image4.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img mx-auto">
+        <img src="{{ post.image5.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img mx-auto">
       </div>
       </div>
     </div>
-    </div>
+
+
 
 
 
 <!-- COMMENT FORM -->
 
 
-        <div class="col-md-8 col-sm-8 card my-4 mx-auto">
+        <div class="col-md-8 col-sm-8 card my-5 mx-auto">
                 <div class="card-body">
                     <!-- comments -->
                     {% with comments.count as total_comments %}
@@ -69,8 +68,15 @@
 
                     {% endfor %}
                 </div>
+            <h5 class="advertissment mx-auto">Vous devez être connecté pour laisser un commentaire <a class="link-auth" href="{% url 'signup' %}">Inscription</a>/
+            <a class="link-auth" href="{% url 'login' %}">Connexion</a>
+            </h5>
             </div>
-            <div class="col-md-8 card mb-5 mt-3 mx-auto">
+
+
+
+{% if user.is_authenticated %}
+            <div class="col-md-8 col-sm-8 card mb-5 mt-3 mx-auto">
                 <div class="card-body col-md-8 mx-auto">
                     {% if new_comment %}
                         <div class="alert alert-success" role="alert">
@@ -86,7 +92,7 @@
                     {% endif %}
                 </div>
             </div>
-
+{% endif %}
 
 </br>
 </br>
