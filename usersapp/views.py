@@ -62,11 +62,3 @@ class LogoutView(View):
         return redirect('account_login')
 
 
-@method_decorator(login_required(login_url='login/'), name="dispatch")
-class HomeView(View):
-    def get(self, request):
-        if self.request.user.groups.filter(name='M').exists():
-            return render(request, './templates/home.html')
-        else:
-            messages.info(request, 'You are not authorized to access this page.')
-            return redirect('account_login')

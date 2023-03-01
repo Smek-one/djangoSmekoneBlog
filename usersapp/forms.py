@@ -14,20 +14,6 @@ class UserRegisterForm(UserCreationForm):
         model = User
         fields = ['username', 'email', 'password1', 'password2']
 
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.helper = FormHelper()
-    #
-    # def __init__(self, *args, **kwargs):
-    #     super().__init__(*args, **kwargs)
-    #     self.helper = FormHelper()
-    #     self.helper.form_id = 'id-exampleForm'
-    #     self.helper.form_class = 'blueForms'
-    #     self.helper.form_method = 'post'
-    #     self.helper.form_action = 'submit_survey'
-    #
-    #     self.helper.add_input(Submit('submit', 'Submit'))
-
 
 class UserForm(UserCreationForm):
     username = forms.CharField(widget=forms.TextInput(
@@ -70,3 +56,4 @@ class UserForm(UserCreationForm):
     class Meta:
         model = User
         fields = ['username', 'email', 'first_name', 'last_name', 'password1', 'password2']
+

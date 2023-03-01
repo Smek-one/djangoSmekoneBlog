@@ -2,14 +2,15 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 from . import views
-from django.urls import path
+from django.urls import path, include
 
 from .views import AboutView
 
 urlpatterns = [
     path('', views.PostList.as_view(), name='home'),
     path('about/', views.AboutView.as_view(), name='about'),
-    path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    #path('<slug:slug>/', views.PostDetail.as_view(), name='post_detail'),
+    path("<slug:slug>/", views.post_detail, name="post_detail"),
 ]
 
 if settings.DEBUG:

@@ -1,37 +1,97 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load crispy_forms_tags %}
 {% load static %}
 
-<div class="container mb-5">
+
+<br class="container mb-5">
   <div class="row">
-    <div class="col-md-12 card mt-3 mx-auto">
+    <div class="col-md-10 card mt-3 mx-auto">
       <div class="card-body mx-auto text-center">
-        <h1 class="card-title">{% block title %} {{ object.title }} {% endblock title %}</h1>
+        <h1 class="card-title">{% block title %} {{ post.title }} {% endblock title %}</h1>
         <p class="muted">{{ post.author }} | {{ post.created_on }}</p>
 
         <figure class="figure">
-  <img src="{{ post.image1.url }}" alt="{{post.title}}" class="img-thumbnail rounded mx-auto d-block">
-  <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
-</figure>
+  <img src="{{ post.image1.url }}" alt="{{image1.title}}" class="img-thumbnail rounded mx-auto">
+            <figcaption class="figure-caption">{{ image1.title }}</figcaption>
+  </figure>
 
 
-        <p class="card-text">{{ object.content | safe }}</p>
+        <p class="card-text">{{ post.content | safe }}</p>
 
       <div class="imgs">
-        <img src="{{ post.image2.url }}" alt="{{post.title}}" class="rounded o-img">
-        <img src="{{ post.image3.url }}" alt="{{post.title}}" class="rounded o-img">
+          <figure class="figure">
+        <img src="{{ post.image2.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
+              </figure>
+          <figure class="figure">
+        <img src="{{ post.image3.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
+              </figure>
 
-        <p class="card-text">{{ object.content | safe }}</p>
+        <p class="card-text">{{ post.content | safe }}</p>
 
-        <img src="{{ post.image4.url }}" alt="{{post.title}}" class="rounded o-img">
-        <img src="{{ post.image5.url }}" alt="{{post.title}}" class="rounded o-img">
+        <img src="{{ post.image4.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
+        <img src="{{ post.image5.url }}" alt="{{post.title}}" class="img-thumbnail rounded o-img">
       </div>
       </div>
     </div>
+    </div>
 
 
-  </div>
-</div>
+
+<!-- COMMENT FORM -->
+
+
+        <div class="col-md-8 col-sm-8 card my-4 mx-auto">
+                <div class="card-body">
+                    <!-- comments -->
+                    {% with comments.count as total_comments %}
+                        <h2>{{ total_comments }} commentaire(s)</h2>
+
+                        <p>
+                    {% endwith %} {% for comment in comments %}
+                        </p>
+
+
+                            <h6 class="comment-name text-center"><ins>
+                                {{ comment.name }} le
+                                <span class="text-muted text-center">
+                                    {{ comment.created_on }}
+                                </span>
+                            </h6>
+                    <figure class="text-center">
+                            <blockquote class="blockquote ">
+                                <p class="comment">
+                            {{ comment.body | linebreaks }}
+                                </p>
+                            </blockquote>
+                    </figure>
+                    <hr>
+
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col-md-8 card mb-5 mt-3 mx-auto">
+                <div class="card-body col-md-8 mx-auto">
+                    {% if new_comment %}
+                        <div class="alert alert-success" role="alert">
+                            Votre commentaire est en cours de modération...
+                        </div>
+                    {% else %}
+                        <h3>Laissez un commentaire</h3>
+                        <form method="post" class="card-form">
+                            {{ comment_form | crispy }}
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-lg">Envoyer &rarr;</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+
+
+</br>
+</br>
+
+
 
 {% endblock content %}
 

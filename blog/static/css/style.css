@@ -48,14 +48,13 @@ footer{
     height: 5vh;
     color: #5784BA !important;
     text-shadow: 1px 2px #F4CFDF !important;
-    background: #D4D3DC;
-    margin-top: 5vh !important;
+    background: #E1A624;
 }
 
 .card {
     background: #D4D3DC !important;
     color: #384454 !important;
-    border: 1px solid #AD956B !important;
+    border: 1px solid #E1A624 !important;
 
 }
 
@@ -82,17 +81,55 @@ footer{
 .btn{
     color: #E1A624 !important;
     background: #317AC1 !important;
+    margin-top: 2vh;
 }
 
-.top-img{
-    width: 70rem;
+.btn:hover{
+    color: #317AC1 !important;
+    background: #E1A624 !important;
+    margin-top: 2vh;
+}
+
+.top-img, .img-thumbnail{
+    width: 80rem;
 }
 
 .o-img{
     width: 35rem;
-    margin: 2vh auto;
+    margin: 2vh 2vw;
 }
 
 .pic-of-me{
     width: 25rem;
 }
+
+#hint_id_password1, #div_id_password2{
+    display: none;
+}
+
+.card-form{
+    width: 100%;
+    margin: auto;
+}
+
+.comment-name{
+    font-weight: bold;
+}
+
+h6{
+    color: #384454 !important;
+}
+
+blockquote > p{
+    color: #317AC1;
+}
+
+hr{
+    color: #5784BA !important;
+    font-weight: bolder;
+}
+
+.comments-link{
+    color:#5784BA;
+}
+

@@ -43,8 +43,17 @@ INSTALLED_APPS = [
     'usersapp',
     'crispy_forms',
     "crispy_bootstrap5",
-
 ]
+
+
+# DEFAULT_FROM_EMAIL = "smek-one@hotmail.fr"
+# EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
+# EMAIL_HOST = "smtp.live.com"
+# EMAIL_PORT = "587"
+# EMAIL_USE_TLS = True
+# EMAIL_HOST_USER = 'smek-one@hotmail.fr'
+# EMAIL_HOST_PASSWORD = 'Ke2012Lo2015'
+# DEFAULT_FROM_EMAIL = "Helpdesk <smek-one@hotmail.fr"
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
@@ -94,9 +103,8 @@ DATABASES = {
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
-...
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-...
+
+
 
 
 # Password validation
